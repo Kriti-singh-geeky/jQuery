@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+
+    
+    <!-- jQuery CDN link-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+     <style>
+        
+#test1{
+    width: 200px;
+    height: 180px;
+    background: rgb(191, 93, 93);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#test2{
+    width: 200px;
+    height: 180px;
+    background:rgb(46, 101, 46);
+    padding: 10px;
+    text-align: center;
+}
+     </style>
+  </head>
+
+  <body>
+
+    <h1>Basic jQuery Syntax</h1>
+
+    <div id="test1">
+        <h2>Test Box 1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, nesciunt.</p>
+    </div>
+
+    <div id="test2">
+        <h2>Test Box 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, fugiat.
+        </p>
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+           let a =$('#test1').html();
+            console.log(a);
+
+            let b =$('#test2').html();
+            console.log(b);
+        });
+
+    </script>
+  </body>
+</html>
