@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+
+    <!-- jQuery CDN link-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css -->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #box{
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Selectors</h1>
+
+    <div class="test" id="box">
+        <h2>Test box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, blanditiis.</p>
+    </div>
+
+    <ul id="list">
+        <li>HTML</li>
+        <li class="test">CSS</li>
+        <li>JS</li>
+        <li class="test">PHP</li>
+    </ul>
+
+    <!-- jQuery -->
+    <script>
+        $(document).ready(function(){
+            $('#list').css("color" , "red");
+
+            $('.test').css("border" , "2px solid green");
+        });
+    </script>
+</body>
+</html>
