@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- jQuery CDN link-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css -->
+     <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #box{
+            padding: 10px;
+            border: 1px solid #000;
+        }
+     </style>
+</head>
+<body>
+    <h1>jQuery css methods</h1>
+
+    <div id="box">
+        <h2>test box</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit.
+        </p>
+    </div>
+    <br>
+    <button id="stylebutton">Add style</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#stylebutton').click(function(){
+                $('#box').css({"background":"pink","color":"white"});
+            });
+        });
+    </script>
+</body>
+</html>

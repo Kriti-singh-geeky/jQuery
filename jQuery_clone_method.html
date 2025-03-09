@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+     <!-- jQuery CDN link-->
+     <script
+     src="https://code.jquery.com/jquery-3.7.1.min.js"
+     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+     crossorigin="anonymous"
+   ></script>
+
+   <!-- css -->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightgreen;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        #box2{
+            background: pink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery clone() Methods</h1>
+
+    <div id="box">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, architecto?</p>
+    </div>
+
+    <br>
+
+    <div id="box2">
+        <p>this is another div</p>
+    </div>
+    
+    <br>
+    <button id="cloneBtn">clone</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#cloneBtn").click(function(){
+                $('#box h2').clone().prependTo('#box2');
+
+                $('#box p').clone().appendTo('#box2');
+            });
+
+        });
+    </script>
+</body>
+</html>

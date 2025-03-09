@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <!-- jQuery CDN link-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css -->
+     <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #box{
+            background: pink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+     </style>
+</head>
+<body>
+    <h1>jQuery get method</h1>
+
+    <div id="box" class="test abc">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, fugit.</p>
+
+    </div>
+
+    <script>
+        // $(document).ready(function(){
+        //     let a =$('#box').html();
+        //     console.log(a);
+        // });
+
+        // $(document).ready(function(){
+        //     let a =$('#box').text();
+        //     console.log(a);
+        // });
+
+        $(document).ready(function(){
+            let a =$('#box').attr('class');
+            console.log(a);
+        });
+    </script>
+</body>
+</html>

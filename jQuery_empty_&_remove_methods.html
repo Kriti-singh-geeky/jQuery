@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+     <!-- jQuery CDN link-->
+     <script
+     src="https://code.jquery.com/jquery-3.7.1.min.js"
+     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+     crossorigin="anonymous"
+   ></script>
+
+   <!-- css -->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightgreen;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Empty & Remove Methods</h1>
+
+    <div id="box">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, architecto?</p>
+    </div>
+    
+    <br>
+    <button id="emptyBtn">Empty</button>
+    <button id="removeBtn">Remove</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#emptyBtn").click(function(){
+                $('#box').empty();
+            });
+
+            $("#removeBtn").click(function(){
+                $('#box').remove();
+            });
+        });
+    </script>
+</body>
+</html>
