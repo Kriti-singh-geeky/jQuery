@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <!-- jQuery CDN link-->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- css -->
+  <style>
+    #box{
+        background: lightgreen;
+        padding: 10px;
+        border: 1px solid black;
+    }
+   </style>
+</head>
+<body>
+    <h1>jQuery hide and show Method</h1>
+
+    <div id="box">
+        <h2>Tets Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque facere soluta iusto autem porro necessitatibus similique, vel quas, neque blanditiis praesentium id rerum, labore animi ea error sequi eveniet voluptates!</p>
+    </div>
+    <br>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">show</button>
+    <button id="toggleBtn">Toggle</button>
+
+    <script>
+    $(document).ready(function(){
+        $('#hideBtn').click(function(){
+            $('#box').hide(3000,function(){
+                console.log("Now it is hidden");
+            }); 
+        });
+
+        $('#showBtn').click(function(){
+            $('#box').show(1000,function(){
+                console.log("Now it is show");
+                
+            }); 
+        });
+
+        $('#toggleBtn').click(function(){
+            $('#box').toggle(1000); 
+        });
+    });
+    </script>
+</body>
+</html>
