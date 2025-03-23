@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <!-- jQuery CDN link-->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- css -->
+
+  <style>
+    #test{
+        background: pink;
+        padding: 5px;
+    }
+
+    .red{
+        color:red;
+    }
+  </style>
+</head>
+<body>
+    <h1>jQuery wrapAll()</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, maiores expedita! Tempore repellendus ea deserunt?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore praesentium placeat delectus accusantium animi repellendus!</p>
+
+    <br>
+
+    <button id="wrapAllBtn">WrapAll</button>
+    <button id="wrapInnerBtn">WrapInner</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#wrapAllBtn').click(function(){
+                $('p').wrapAll('<div id="test"></div>');
+            });
+
+            $('#wrapInnerBtn').click(function(){
+                $('h1').wrapInner('<span class="red"></span>');
+            });
+        });
+    </script>
+
+</body>
+</html>
