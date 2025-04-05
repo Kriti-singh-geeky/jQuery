@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- jQuery CDN link-->
+   <script
+   src="https://code.jquery.com/jquery-3.7.1.min.js"
+   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+   crossorigin="anonymous"
+ ></script>
+
+ <!-- css -->
+  <style>
+    #main-outer{
+        background: rgb(138, 79, 138);
+        padding: 20px;
+        border: 2px solid black;
+    }
+
+    #outer{
+        background: rgb(119, 119, 53);
+        padding: 15px;
+        border: 2px solid black;
+    }
+
+    #inner{
+        display: flex;
+        background: pink;
+        padding: 10px;
+        border: 2px solid black;
+    }
+
+  </style>
+</head>
+<body>
+    <h1>jQuery Ancestor Method</h1>
+
+    <div id="main-outer">
+        <h2>Main Outer</h2>
+        <div id="outer">
+            <h2>outer</h2>
+            <div id="inner">
+             <h2 id="child-head">inner</h2>
+             <div style="padding: 15px;border: 1px solid black; background: greenyellow;margin: 2px;">A</div>
+             <div style="padding: 15px;border: 1px solid black; background: greenyellow;margin: 2px;">B</div>
+             <div style="padding: 15px;border: 1px solid black; background: greenyellow;margin: 2px;" id="child-c">C</div>
+             <div style="padding: 15px;border: 1px solid black; background: greenyellow;margin: 2px;">D</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // $('#child-c').parent().css('background','red');
+
+            // $('#child-c').parents().css('background','red');
+
+            $('#child-c').parentsUntil('#main-outer').css('background','red');
+       
+             
+        });
+    </script>
+</body>
+</html>
